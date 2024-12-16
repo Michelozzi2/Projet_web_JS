@@ -1,7 +1,7 @@
 ## Créateur
 
 - Michelozzi Matthieu
-- Mirande Clémentine
+
 
 
 ## Prérequis
