@@ -1,0 +1,50 @@
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+    color: black;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.header-row {
+    background-color: rgba(0, 14, 137, 0.83);
+}
+
+tr:not(.header-row) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+body {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.return-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.return-link a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+}

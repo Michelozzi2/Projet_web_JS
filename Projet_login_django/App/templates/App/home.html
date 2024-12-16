@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'App/css/home_style.css' %}">
+</head>
+<body>
+    <div class="flappy-bird-container">
+        <h2>Bienvenue {{ user_login }}!</h2>
+        <!-- Formulaire de déconnexion -->
+        <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">Déconnexion</button>
+        </form>
+        <a href="{% url 'scoreboard' %}">Voir les meilleurs scores</a>
+        <canvas id="gameCanvas" width="1200" height="500"></canvas>
+    </div>
+    <script>
+        const STATIC_URL = "{% static 'App/images/' %}";
+    </script>
+    <script src="{% static 'App/js/subway_shark.js' %}"></script>
+</body>
+</html>

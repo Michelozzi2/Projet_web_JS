@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau des scores</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'App/css/display_score_style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="return-link">
+            <a href="{% url 'home' %}">Retour au jeu</a>
+        </div>
+        <h1>Meilleurs scores</h1>
+    <table>
+        <tr class="header-row">
+            <th>Rang</th>
+            <th>Joueur</th>
+            <th>Score</th>
+            <th>Date</th>
+        </tr>
+        {% for score in scores %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ score.user.user_login }}</td>
+            <td>{{ score.score }}</td>
+            <td>{{ score.date|date:"d/m/Y H:i" }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
